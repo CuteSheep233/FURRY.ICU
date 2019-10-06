@@ -130,7 +130,7 @@ main .Container:before {
     z-index: -1;
     background-size: cover;
     filter: blur(5px);
-    background-image: url(https://cdn.lfio.net/Detroit/1.jpg);
+    background-image: url(https://upload.cc/i1/2019/10/06/c2gYDm.jpg);
 }
 
 main .Container>div {
@@ -215,7 +215,7 @@ main .Container>div .Main_wrapper {
 
 .IsLF .Profile .Rich .MY>div .Ribbon {
     margin-top: 10px;
-    background: linear-gradient(to right, #eb6349, #eca474, #35d9e4, #636161, #878787);
+    background: linear-gradient(to right, #E3D0C9, rgb(143, 111, 113), #9FA3AF, #A8927B, #878787);
 }
 
 .IsLF .Profile .Rich .Icon {

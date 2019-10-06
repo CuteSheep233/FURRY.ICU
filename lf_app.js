@@ -22,54 +22,6 @@ window.onload = function() {
         "background:rgba(197, 197, 197, 0.89); padding:5px 0;",
         "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;", "color: rgb(0, 145, 228); background: rgba(49, 49, 49, 0.85); padding:5px 0;"
     );
-
-    function secondToDate(second) {
-        if (!second) {
-            return 0;
-        }
-        var time = new Array(0, 0, 0, 0, 0);
-        if (second >= 365 * 24 * 3600) {
-            time[0] = parseInt(second / (365 * 24 * 3600));
-            second %= 365 * 24 * 3600;
-        }
-        if (second >= 24 * 3600) {
-            time[1] = parseInt(second / (24 * 3600));
-            second %= 24 * 3600;
-        }
-        if (second >= 3600) {
-            time[2] = parseInt(second / 3600);
-            second %= 3600;
-        }
-        if (second >= 60) {
-            time[3] = parseInt(second / 60);
-            second %= 60;
-        }
-        if (second > 0) {
-            time[4] = second;
-        }
-        return time;
-    }
-
-    function setTime() {
-        currentTime = secondToDate(((Math.round((new Date().getTime() + 8 * 60 * 60 * 1000) / 1000) - Math.round(new Date(Date.UTC(2018, 12, 9, 9, 30, 0)).getTime() / 1000))));
-        currentTimeHtml = currentTime[0] + ' 年 ' + currentTime[1] + ' 天 ' +
-            currentTime[2] + ' 时 ' + currentTime[3] + ' 分 ' + currentTime[4] +
-            ' 秒 ';
-        document.getElementById('Futiwolf_And_Starwolf').innerHTML = currentTimeHtml;
-    }
-    setInterval(setTime, 1000);
-
-    function setTime2() {
-        currentTime = secondToDate(((Math.round((new Date().getTime() + 8 * 60 * 60 * 1000) / 1000) - Math.round(new Date(Date.UTC(2017, 11, 11, 10, 24, 0)).getTime() / 1000))));
-        currentTimeHtml = currentTime[0] + ' 年 ' + currentTime[1] + ' 天 ' +
-            currentTime[2] + ' 时 ' + currentTime[3] + ' 分 ' + currentTime[4] +
-            ' 秒 ';
-        document.getElementById('LF_Time_WebDev').innerHTML = currentTimeHtml;
-    }
-    setInterval(setTime2, 1000);
-
-    //------
-
     const Load_LC_SDK = document.createElement('script');
     Load_LC_SDK.setAttribute('src', 'https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js');
     document.getElementsByTagName('body')[0].appendChild(Load_LC_SDK);
