@@ -111,7 +111,7 @@ main {
     min-height: 100%;
     overflow-x: hidden;
 }
-
+font-family: 'Noto Serif SC', serif;
 main .Container {
     position: relative;
     height: calc(100vh - 140px);
